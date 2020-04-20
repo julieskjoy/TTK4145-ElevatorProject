@@ -1,3 +1,3 @@
 # Synchronizer module
 
-This is a module that synchronizes the connected elevators. 
+This is a module that synchronize the connected elevators. 
