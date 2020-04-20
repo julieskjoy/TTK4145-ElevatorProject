@@ -1,3 +1,5 @@
-# Constants package
+# Configurations package
 
-This is only a package that contains defintions and constants that all other modules can use if they need to.
+This is the package which contains the constants and structs the other modules need, such as:
+- number of floors and elevators
+- structs for elevator, button type and messages
