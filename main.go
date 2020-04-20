@@ -15,13 +15,6 @@ import (
 	"./networkCommunication/peers"
 	ordH "./orderhandler"
 	sync "./syncElevators"
-	// . "github.com/perkjelsvik/TTK4145-sanntid/project/config"
-	// gov "github.com/perkjelsvik/TTK4145-sanntid/project/elevatorGovernor"
-	// esm "github.com/perkjelsvik/TTK4145-sanntid/project/elevatorStateMachine"
-	// hw "github.com/perkjelsvik/TTK4145-sanntid/project/hardware"
-	// "github.com/perkjelsvik/TTK4145-sanntid/project/networkCommunication/network/bcast"
-	// "github.com/perkjelsvik/TTK4145-sanntid/project/networkCommunication/network/peers"
-	// sync "github.com/perkjelsvik/TTK4145-sanntid/project/syncElevators"
 )
 
 func main() {
