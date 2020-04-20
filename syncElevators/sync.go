@@ -20,22 +20,12 @@ type SyncChannels struct {
 	PeerTxEnable    chan bool
 }
 
-// How orders up and down are acknowledged between the elevators
-/*------------------------------------------------------------------*
-|									▲															▼										|
-|		{assignedID elev1 elev2 elev3} {assignedID elev1 elev2 elev3}		|
-|		{assignedID elev1 elev2 elev3} {assignedID elev1 elev2 elev3}		|
-|		{assignedID elev1 elev2 elev3} {assignedID elev1 elev2 elev3}		|
-|		{assignedID elev1 elev2 elev3} {assignedID elev1 elev2 elev3}		|
-*-------------------------------------------------------------------*/
-
 // Synchronise called as goroutine; forwards data to network, synchronises data from network.
 func Synchronise(ch SyncChannels, id int) {
 	var (
 		registeredOrders [NumFloors][NumButtons - 1]AckList
 		elevList         [NumElevators]Elev
 		sendMsg          Message
-		//onlineList       [NumElevators]bool
 		recentlyDied [NumElevators]bool
 		someUpdate   bool
 		offline      bool
