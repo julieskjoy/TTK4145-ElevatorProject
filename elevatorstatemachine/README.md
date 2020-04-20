@@ -1,4 +1,4 @@
-# Elevator State Machine Module
+# Elevator State Machine module
 
 This is the finite state machine of the system that has 3 states and 3 events. 
 
