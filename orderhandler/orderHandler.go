@@ -15,9 +15,7 @@ func setOrder(floor int, buttonType Button, elevator Elev, set bool) {
 	elevator.Queue[floor][buttonType] = set
 }
 
-// en goroutine som mottar knappetrykk og states og sørger for at riktig heis går til riktig plass.
-// trenger vel ikke returnere noe??
-
+// OrderHandler get buttonevents and states. It makes sure that the most suited elevator takes the incoming order
 func OrderHandler(order chan Keypress, nrElev int, completedOrderCh chan int, updateLightsCh chan [NumElevators]Elev,
 	newOrderCh chan Keypress, elevatorCh chan Elev, updateQueueCh chan [NumElevators]Elev, updateSyncCh chan Elev,
 	orderUpdateCh chan Keypress) {
