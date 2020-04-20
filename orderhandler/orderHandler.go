@@ -125,14 +125,12 @@ func OrderHandler(order chan Keypress, nrElev int, completedOrderCh chan int, up
 }
 
 func SetLights(updateLightsCh <-chan [NumElevators]Elev, nrElev int) {
-	//var orders [NumElevators]bool
 
 	for {
 		elevators := <-updateLightsCh
 		for floor := 0; floor < NumFloors; floor++ {
 			for button := BtnUp; button < NumButtons; button++ {
 				for elevator := 0; elevator < NumElevators; elevator++ {
-					//orders[elevator] = false
 					if elevator != nrElev && (button == BtnInside || button == BtnDown || button == BtnUp) {
 						continue
 					}
