@@ -8,7 +8,6 @@ import (
 	hw "../hardware"
 )
 
-// StateMachineChannels contains all channels between governor - esm and hardware - esm
 type StateMachineChannels struct {
 	OrderComplete  chan int
 	Elevator       chan Elev
