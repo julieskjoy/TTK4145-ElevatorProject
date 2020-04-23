@@ -6,3 +6,5 @@ This is the module that synchronizes the connected elevators. It is responsible 
 - elevator goes off network
 - orders finished and orders still in play
 - updating peers and list of acknowledged orders
+
+source: github.com/PerKjelsvik/project
